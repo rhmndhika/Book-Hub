@@ -1,0 +1,105 @@
+.wrapper{
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    width: 270px;
+    height: 250px;
+}
+
+.book {
+    display: inline-block;
+    width: 280px;
+    height: 380px;
+    box-shadow: 0 0 20px #aaa;
+    margin: 25px;
+    /* padding: 10px 10px 0 10px; */
+    vertical-align: top;
+    transition: height 1s;
+    overflow: hidden;
+    position: relative;
+  }
+  /* star button */
+  /* .book:after {
+    font-family: FontAwesome;
+    content: "\f006";
+    font-size: 35px;
+    position: relative;
+    left: -.1cm;
+    top: -1.6cm;
+    float: right;
+  } */
+  
+  .cover {
+    display: flex;
+    height: 340px;
+    overflow: hidden;
+  }
+  
+  .cover img {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .book p {
+    margin-top: 12px;
+    font-size: 20px;
+  }
+  
+  .book .author {
+    font-size: 15px;
+  }
+
+
+.info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.btn-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-search{
+  margin: 1rem;
+  width: 250px;
+  background-color: brown;
+}
+
+.card-search img{
+  max-width: 100%;
+}
+
+.info .title{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn-Modal{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+
+/* .book .description{
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow: auto;
+  max-height: 100%;
+}
+
+
+.book:hover .description{
+  transform: translateY(0%);
+} */
+
