@@ -2,14 +2,15 @@
     border-radius: 1rem;
     padding: 0.5rem;
     margin-bottom: 10px;
-    width: 270px;
+    width: 250px;
     height: 250px;
 }
 
 .book {
     display: inline-block;
-    width: 280px;
-    height: 380px;
+    width: 175px;
+    max-width: max-content;
+    height: fit-content;
     box-shadow: 0 0 20px #aaa;
     margin: 25px;
     /* padding: 10px 10px 0 10px; */
@@ -31,7 +32,7 @@
   
   .cover {
     display: flex;
-    height: 340px;
+    height: 180px;
     overflow: hidden;
   }
   

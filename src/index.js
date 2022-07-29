@@ -14,16 +14,21 @@ import DetailCategory from './pages/DetailCategory';
 import CategoryPage from './pages/CategoryPage';
 import Category from './components/Category/Category';
 import About from './pages/About';
+import Test from './pages/Test';
+import Home from './pages/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
-    <Route path="/" element={<App />} />
+    {/* <Route path="/" element={<App />} /> */}
+    <Route path="/" element={<Home />} />
     <Route path="/category/" element={<CategoryPage />} />
     <Route path="/detailcategory/:subject" element={<DetailCategory />} />
     <Route path="/about" element={<About />} />
+    <Route path="/test" element={<Test/>} />
+    <Route path="/books" element={<App />} />
     <Route path="*" element={<ErrorPage />} />
     </Routes>
     </BrowserRouter>

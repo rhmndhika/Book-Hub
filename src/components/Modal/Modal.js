@@ -5,9 +5,13 @@ import './Modal.css'
 import { FaSearch, FaShareAlt} from "react-icons/fa";
 
 
-const  Example =(props) => {
+const  Modals =(props) => {
   
   const [show, setShow] = useState(false);
+
+  const openModal = () => {
+    setShow(true)
+  }
 
   // const [bookHome, setBookHome] = useState(props.data);
 
@@ -19,15 +23,13 @@ const  Example =(props) => {
   //   fetchApiModal()
   // }, [])
   
- 
-  
 
   return (
     <>
       <button className='button-31' onClick={() => setShow(true)} >
         Show more
       </button>
-
+    
       <Modal
         show={show}
         onHide={() => setShow(false)}
@@ -83,4 +85,4 @@ const  Example =(props) => {
   );
 }
 
-export default Example
+export default Modals

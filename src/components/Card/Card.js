@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import './Card.css'
-import Example from '../Modal/Modal';
+import Modals from '../Modal/Modal';
 
 const CardBooks = (props) =>  {
 
@@ -25,10 +25,14 @@ const CardBooks = (props) =>  {
             .catch(console.error);
         }, [])
         
-  
+        function A() {
+          alert("ABC")
+        }
+
+
   return (
     <div>
-    <Container fluid className='wrapper'>
+    <Container  fluid className='wrapper'>
             {bookHome && bookHome.map((i, index) => {
                 return(
                 <div className='image-container' key={index}>  
@@ -40,7 +44,7 @@ const CardBooks = (props) =>  {
 
 
                     <div className='btn-Modal'>
-                    <Example 
+                    <Modals
                     thumbnail={i.volumeInfo.imageLinks.thumbnail}  
                     title={i.volumeInfo.title}
                     description={i.volumeInfo.description}

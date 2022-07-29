@@ -34,11 +34,6 @@ const Category = () => {
         },
         
         {
-            image: Bisnis,
-            text: "Business & Economics"
-        },
-        
-        {
             image: Komputer,
             text: "Computers"
         },
@@ -112,6 +107,11 @@ const Category = () => {
  
   return (
     <div>
+        <div className='text-category'>
+            <h1>Discover</h1>
+            <h2>Go beyond your reading list</h2>
+            <h3>with a variety of topics & subtopics to explore</h3>
+        </div>
         <div className='container-category'>
         {dataCategory.map((item, index) => {
         return (

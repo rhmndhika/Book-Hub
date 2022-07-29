@@ -1,0 +1,23 @@
+.media-scroller{
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: auto;
+    white-space: nowrap;
+    display: flex;
+    margin: 15px 50px 0 50px;
+}
+
+.media-element img{
+    width: 175px;
+    height: 250px;
+    border: 1px solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: 15px;
+}
+
+.media-text h2{
+    margin: 15px 50px 0 50px;
+    font-size: 25px;
+}
