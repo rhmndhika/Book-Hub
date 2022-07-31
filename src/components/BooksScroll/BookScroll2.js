@@ -7,7 +7,7 @@ import './BookScroll2.css'
 
 const BooksScroll2 = () => {
 
-    const url2 = "https://www.googleapis.com/books/v1/volumes?q=crime+inauthor:keyes&key=AIzaSyDIwDev4gFHRqCh4SSaO9eLKEeI7oYt6aE"
+    const url2 = "https://www.googleapis.com/books/v1/volumes?q=medical+inauthor:keyes&key=AIzaSyDIwDev4gFHRqCh4SSaO9eLKEeI7oYt6aE"
    
 
     const [BooksScroll, setBooksScroll] = useState([]);
