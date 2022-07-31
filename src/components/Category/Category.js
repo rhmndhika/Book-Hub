@@ -36,10 +36,6 @@ const Category = () => {
 
     const dataCategory = [
         {
-            image: Arsitek,
-            text: "Architecture"
-        },
-        {
             image: Arts,
             text: "Art"
         },
@@ -147,7 +143,6 @@ const Category = () => {
                 </span>
                 <span>
                     <p className='text-category'>{item.text}</p>
-                    <p className='text-result'>Found 1000 book</p>
                 </span>
                 </div>
                     </a>

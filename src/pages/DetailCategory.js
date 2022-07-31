@@ -1,17 +1,29 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import { useParams } from "react-router-dom";
-import BasicExample from '../components/Navbar/Navbar';
-import CardBooks from '../components/Card/Card';
 import Header from '../components/Header/Header'
-import Container from 'react-bootstrap/Container';
-import Example from '../components/Modal/Modal';
+import NotFound from '../asset/NotFound.png'
+import Modals from '../components/Modal/Modal'
+import Navbars from '../components/Navbar/Navbar';
+
+
 
 const DetailCategory = () => {
 
   const url = "https://www.googleapis.com/books/v1/volumes?q=subject:"
 
   const [category, setCategory] = useState("");
+
+  const [id, setId] = useState();
+    
+  const [show, setShow] = useState(false);
+
+  const MasGerland = (event, param) => {
+      setShow(true);
+      setId(param);
+      console.log(id)
+  }
+
 
 
   const {subject} = useParams();
@@ -31,27 +43,62 @@ const DetailCategory = () => {
     }, [])
 
   return (
-   <div>
-    <Container fluid className='wrapper'>
-            {category && category.map((i, index) => {
-                return(
-                <div className='image-container' key={index}>  
-                  <div className="book read">
+    <div>
+    <Navbars />
+    <div className="testA">
+    {category && category.map((i, index) =>{
+      return(
+        <div className="antaraA" key={index}>
+        <a onClick={event => MasGerland(event, i.id)}>
+        <div className="headerA">
+          <div className="imageA">
+            {i.volumeInfo.imageLinks.thumbnail 
+            ?
+              <img src={i.volumeInfo.imageLinks.thumbnail} />
+              :
+              <img src={NotFound} />
+            }
+          </div>
+        </div>
+        </a>
 
-                    <div className="cover">
-                    <img src={i.volumeInfo.imageLinks.thumbnail} />
-                    </div>
+      <div className="textA">
+        <p>{i.volumeInfo.title}</p>
+      </div>
+     
+      <div className="textB">
+        {i.volumeInfo.authors ?
+        <p>{i.volumeInfo.authors}</p>
+        :
+        <p>Author Not Found</p> 
+        }
+      </div>
 
-                    <div className="info">
-                      <h3 className="title">{i.volumeInfo.title}</h3>
-                    </div>
-                         
-                  </div>
-                </div>
-                    )
-                })}
-    </Container>
+      {i.id == id &&
+      <Modals 
+        show = {show} close={()=> setShow(false)}
+        check = {()=> setShow(true)}
+        thumbnail={i.volumeInfo.imageLinks.thumbnail}  
+        title={i.volumeInfo.title}
+        description={i.volumeInfo.description}
+        category={i.volumeInfo.categories}
+        author={i.volumeInfo.authors}
+        page={i.volumeInfo.pageCount}
+        language={i.volumeInfo.language}
+        publisher={i.volumeInfo.publisher}
+        published={i.volumeInfo.publishedDate}
+        link={i.volumeInfo.previewLink}
+        epub={i.accessInfo.epub.isAvailable}
+        currency={i.saleInfo.saleability ? i.saleInfo.saleability : ''}
+              // currency={i.saleInfo.saleability.listPrice.currencyCode}
+              // price={i.saleInfo.listPrice.amount}
+              />
+      }
+
     </div>
+    )})}
+  </div>
+  </div>
   )
 }
 

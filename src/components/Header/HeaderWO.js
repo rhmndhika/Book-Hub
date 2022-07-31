@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
-import './Header.css'
+import './HeaderWO.css'
 import BootstrapIMG from '../../asset/Bootstrap5.png'
 import ReactIMG from '../../asset/React.png'
 import AxiosIMG from '../../asset/Axios.png'
 import GoogleBooks from '../../asset/GoogleBooks.png'
 import { FaSearch } from "react-icons/fa";
 
-const Header = () => {
+const HeaderWO = () => {
 
   const [search, setSearch] = useState("");
 
@@ -53,53 +53,10 @@ const Header = () => {
             </div>
           </div>
 
-          
-          <div className='text-feature'>
-            <h1>Featured in</h1>
-          </div>
-            <div className='container-category'>
-
-                <div className='box-sponsor' >  
-                  <div className='inside-sponsor'>
-                  <span>
-                      <img src={ReactIMG}/>
-                  </span>   
-                  </div>
-                </div>
-
-                <div className='box-sponsor' >  
-                  <div className='inside-sponsor'>
-                  <span>
-                      <img src={AxiosIMG}/>
-                  </span>   
-                  </div>
-                </div>
-
-
-                <div className='box-sponsor' >  
-                  <div className='inside-sponsor'>
-                  <span>
-                      <img src={BootstrapIMG}/>
-                  </span>   
-                  </div>
-                </div>
-
-
-                <div className='box-sponsor' >  
-                  <div className='inside-sponsor'>
-                  <span>
-                      <img src={GoogleBooks}/>
-                  </span>   
-                  </div>
-                </div>
-
-                <hr className='horizontal-line' size="10px" width="100%"/>
-            </div>
-
         </div>
       </div>
     </div>
   )
 }
 
-export default Header
+export default HeaderWO
