@@ -3,11 +3,11 @@ import axios from 'axios'
 import Container from 'react-bootstrap/Container';
 import Arsitek from '../../asset/Arsitek.png';
 import Modals from '../Modal/Modal';
-import './BookScroll.css'
+import './BookScroll2.css'
 
-const BooksScroll = () => {
+const BooksScroll2 = () => {
 
-    const url1 = "https://www.googleapis.com/books/v1/volumes?q=medic+inauthor:keyes&key=AIzaSyDIwDev4gFHRqCh4SSaO9eLKEeI7oYt6aE&maxResults=10"
+    const url2 = "https://www.googleapis.com/books/v1/volumes?q=crime+inauthor:keyes&key=AIzaSyDIwDev4gFHRqCh4SSaO9eLKEeI7oYt6aE"
    
 
     const [BooksScroll, setBooksScroll] = useState([]);
@@ -24,7 +24,7 @@ const BooksScroll = () => {
 
     const fetchURL1 = () => {
         axios
-        .get(`${url1}`)
+        .get(`${url2}`)
         .then( (res) => {
             setBooksScroll(res?.data?.items)
             console.log(res?.data?.items)
@@ -40,16 +40,16 @@ const BooksScroll = () => {
 
 
   return (
-    <div className='wrap'>
-          <div className='preview-description'>
-                <h2>Read your textbooks & find supporting sources</h2>
+    <div className='wrap2'>
+          <div className='preview-description2'>
+                <h2>Explore (Subject) bestsellers</h2>
             </div>
-        <div className='media-scroller'> 
+        <div className='media-scroller2'> 
     {BooksScroll.map((i, index) => {
         return(
             <div key={index}>
             <a className='test'>
-            <div className='media-element'>
+            <div className='media-element2'>
                 <img onClick={event => MasGerland(event, i.id)} src={i.volumeInfo.imageLinks.thumbnail} />
             </div>
             </a>
@@ -81,4 +81,4 @@ const BooksScroll = () => {
   )
 }
 
-export default BooksScroll
+export default BooksScroll2

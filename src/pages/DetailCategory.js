@@ -32,8 +32,6 @@ const DetailCategory = () => {
 
   return (
    <div>
-    <BasicExample />
-    <Header />
     <Container fluid className='wrapper'>
             {category && category.map((i, index) => {
                 return(

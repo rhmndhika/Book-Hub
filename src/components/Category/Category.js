@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import './Category.css'
 import { Button } from 'bootstrap';
 import axios from 'axios';
@@ -22,6 +22,17 @@ const Category = () => {
     const url = "https://www.googleapis.com/books/v1/volumes?q=subject:"
 
     const [category, setCategory] = useState("");
+   
+    const [visible, setVisible] = useState(10);
+
+
+    const showMoreItems = () => {
+        setVisible(prevValue => prevValue + 4);
+    }
+
+    const showLessItems = () => {
+        setVisible(10);
+    }
 
     const dataCategory = [
         {
@@ -99,32 +110,51 @@ const Category = () => {
         })
         .catch(console.error);
     }
-    
+
+      
         useEffect(() => {
           fetchAPI()
         }, [])
 
  
   return (
-    <div>
-        <div className='text-category'>
-            <h1>Discover</h1>
-            <h2>Go beyond your reading list</h2>
-            <h3>with a variety of topics & subtopics to explore</h3>
-        </div>
-        <div className='container-category'>
-        {dataCategory.map((item, index) => {
-        return (
-            <div className='box' key={index}>
-                <img src={item.image} />
-                <div className='box-content'> 
-                <a href={`/detailcategory/${item.text}`}>
-                    <h3>{item.text}</h3>
-                </a>
+    <div className='wrap-category'>
+        <div className='description'>
+            <div className='preview-description'>
+                <h1>Discover</h1>
+                <h2>Go beyond your reading list</h2>
+                <h3>with a variaty of 5000 books</h3>
+            </div>
+            <div className='wrap-showmore'>
+                <div className='showmore-description'>  
+                       {visible <=10 
+                        ?
+                        <a onClick={showMoreItems}>View all</a>
+                        :
+                        <a onClick={showLessItems}>View less</a>
+                       }
                 </div>
             </div>
-        )})}
         </div>
+    <div className='container-category'>
+        {dataCategory.slice(0, visible).map((item, index) =>{
+            return (
+                <div className='box-category' key={index}>
+                    <a href={`/detailcategory/${item.text}`}>
+                <div className='inside-category'>
+                <span>
+                    <img src={item.image}/>
+                </span>
+                <span>
+                    <p className='text-category'>{item.text}</p>
+                    <p className='text-result'>Found 1000 book</p>
+                </span>
+                </div>
+                    </a>
+            </div>
+        )})}
+    <hr className='horizontal-line' size="10px" width="100%"/>
+    </div>
     </div>
   )
 }

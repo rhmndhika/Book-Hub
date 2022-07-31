@@ -14,6 +14,8 @@ const CardBooks = (props) =>  {
    
     const [bookHome, setBookHome] = useState([]);
     const [modalShow, setModalShow] = React.useState(false);
+
+    const [showLogin, setShowLogin] = useState(false);
  
         useEffect( () => {
             axios
@@ -44,7 +46,8 @@ const CardBooks = (props) =>  {
 
 
                     <div className='btn-Modal'>
-                    <Modals
+                    {/* <Modals 
+                    show = {showLogin} close={()=> setShowLogin(false)}
                     thumbnail={i.volumeInfo.imageLinks.thumbnail}  
                     title={i.volumeInfo.title}
                     description={i.volumeInfo.description}
@@ -59,8 +62,9 @@ const CardBooks = (props) =>  {
                     currency={i.saleInfo.saleability ? i.saleInfo.saleability : ''}
                     // currency={i.saleInfo.saleability.listPrice.currencyCode}
                     // price={i.saleInfo.listPrice.amount}
-                    />
+                    /> */}
                     </div>
+                    <button onClick={()=> setShowLogin(true)}></button>
                   </div>
                 </div>
                     )

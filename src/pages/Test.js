@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Arsitek from '../asset/Arsitek.png';
 import './Test.css'
+import Header from '../components/Header/Header'
 
 const Test = () => {
+
+  const [items, setItems] = useState([]);
+  const [visible, setVisible] = useState(3);
+
+  const showMoreItems = () => {
+    setVisible(prevValue => prevValue + 3)
+  }
 
   const dataTest = [
     {
@@ -48,18 +56,9 @@ const Test = () => {
     
   ]
   return (
-    <div className='test-test'>
-    {dataTest.map((item) => {
-      return (
-    <div className='test-container'>
-      <div>
-        <img src={item.src} />
-        <p>{item.text}</p>
-      </div>
-    </div>
-        )
-    })}
-  </div>
+   <div>
+    <Header />
+   </div>
   )
 }
 

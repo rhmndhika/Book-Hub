@@ -7,32 +7,17 @@ import { FaSearch, FaShareAlt} from "react-icons/fa";
 
 const  Modals =(props) => {
   
-  const [show, setShow] = useState(false);
-
-  const openModal = () => {
-    setShow(true)
-  }
-
-  // const [bookHome, setBookHome] = useState(props.data);
-
-  // const fetchApiModal = () => {
-  //   setBookHome(bookHome)
-  // }
-
-  // useEffect(() => {
-  //   fetchApiModal()
-  // }, [])
-  
 
   return (
     <>
-      <button className='button-31' onClick={() => setShow(true)} >
+      {/* <button className='button-31' onClick={() => setShow(true)} >
         Show more
-      </button>
+      </button> */}
     
       <Modal
-        show={show}
-        onHide={() => setShow(false)}
+        show={props.show}
+        // onHide={() => setShow(false)}
+        onHide={props.close}
         dialogClassName="modal-90w"
         aria-labelledby="example-custom-modal-styling-title"
       >
@@ -69,6 +54,7 @@ const  Modals =(props) => {
                 <div className='modal-containerText'>
                   <h1>{props.title}</h1>
                   <h2>{props.author}</h2>
+            
                   <div className='modal-desc'>
                   <p>{props.description}</p>
                   </div>

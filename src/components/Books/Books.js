@@ -12,7 +12,7 @@ import CardBooks from '../Card/Card';
 import Button from 'react-bootstrap/Button';
 import Category from '../Category/Category';
 import DetailCategory from '../../pages/DetailCategory';
-import Example from '../Modal/Modal';
+import Modals from '../Modal/Modal';
 
 const url = "https://www.googleapis.com/books/v1/volumes?q="
 const key = "&key=AIzaSyDIwDev4gFHRqCh4SSaO9eLKEeI7oYt6aE";
@@ -67,8 +67,8 @@ const Books = () => {
               </div>
 
 
-              <div className='btn-Modal'>
-              <Example 
+              {/* <div className='btn-Modal'>
+              <Modals
               thumbnail={i.volumeInfo.imageLinks.thumbnail}  
               title={i.volumeInfo.title}
               description={i.volumeInfo.description}
@@ -82,7 +82,7 @@ const Books = () => {
               epub={i.accessInfo.epub.isAvailable}
               currency={i.saleInfo.saleability ? i.saleInfo.saleability : ''}
               />
-              </div>
+              </div> */}
             </div>
           </div>
           )})}

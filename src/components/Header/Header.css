@@ -1,0 +1,272 @@
+.wrap {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr);
+    margin: 0px auto;
+    
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(249, 248, 246);
+    min-height: 612px;
+}
+
+.image-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../../asset/BookLeft.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    height: 40vh;
+}
+
+.image-content img{
+    width: 350px;
+    
+}
+
+
+.image-content h1{
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+
+.text-content h1 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.625rem;
+    line-height: 3rem;
+    letter-spacing: 0.05rem;
+    color: black;
+}
+
+.text-content span {
+    font-family: "Manrope", Helvetica;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+    color: rgb(102, 101, 101);
+    width: 270px;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.content-2{
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 48px;
+}
+
+/* .searchbar{
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    width: 84%;
+    min-width: 52px;
+}
+
+.icon{
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 0px 4px;
+   
+
+}
+
+.inputs{
+    font-family: "Manrope", Helvetica;
+    font-size: 0.938rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.015rem;
+    font-weight: 500;
+    border: medium none;
+    background-color: inherit;
+    text-overflow: ellipsis;
+    outline: currentcolor none medium;
+    padding: 0px;
+    caret-color: rgb(32, 39, 194);
+    color: rgb(102, 101, 101);
+    appearance: none;
+    width: 550px;
+}
+
+.inputs input{
+    width: 100%;
+} */
+
+
+.container-3{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px 25px;
+    width: 100%;
+    height: max-content;
+}
+
+
+.text-content{
+    display: block;
+    margin: 24px auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Inter", Helvetica;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0px;
+    font-weight: 500;
+    color: black;
+}
+
+.text-content-3 h1{ 
+    display: block;
+    margin: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0px;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+.item img{
+    max-width: 150px;
+    align-items: center;    
+    padding: 8px;
+}
+
+
+.search-box {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 60px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search-box:hover .search-text {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover .search-btn {
+    background: white;
+    color: black;
+}
+.search-btn {
+    color: whitesmoke;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-btn i {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.search-text {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+.container-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 150px;
+}
+
+
+.inside-sponsor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: auto;
+    margin-right: 30px;
+}
+
+.inside-sponsor img {
+    width: 100%;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.box-sponsor{
+    width: 150px;
+    display: grid;
+    grid-template-columns: auto(1, 2fr);
+}
+
+.text-feature{
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.text-feature h1 {
+    text-transform: uppercase;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 3rem;
+    letter-spacing: 0.05rem;
+    color: black;
+}
+
+@media only screen and (max-width:768px) {
+    .search-text{
+        width: 100%;
+    }
+  }

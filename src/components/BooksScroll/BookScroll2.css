@@ -1,4 +1,4 @@
-.media-scroller{
+.media-scroller2{
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: auto;
@@ -7,7 +7,7 @@
     margin: 15px 50px 0 50px;
 }
 
-.media-element img{
+.media-element2 img{
     width: 170px;
     height: 250px;
     display: block;
@@ -20,7 +20,7 @@
     border-radius: 8px;
 }
 
-.media-text {
+.media-text2 {
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -29,7 +29,7 @@
     justify-content: space-between;
 }
 
-.wrap .preview-description h2{
+.wrap2 .preview-description2 h2{
     display: flex;
     font-family: "Manrope", Helvetica;
     font-size: 1.5rem;
@@ -52,7 +52,7 @@
     scroll-behavior: smooth;
 }
 
-.wrap .preview-description {
+.wrap2 .preview-description2 {
     display: flex;
     flex-direction: column;
     padding-right: 15px;
@@ -76,18 +76,19 @@
     position: relative;
     }
 
-.media-scroller::-webkit-scrollbar-track{
+.media-scroller2::-webkit-scrollbar-track{
     background: transparent;
     -webkit-overflow-scrolling: touch;
 }
 
 
-.media-scroller::-webkit-scrollbar{
+.media-scroller2::-webkit-scrollbar{
     height: 8px;
     width: 8px;
 }
 
-.media-scroller::-webkit-scrollbar-thumb{
+.media-scroller2::-webkit-scrollbar-thumb{
     background: #141414; 
     border-radius: 10px;
 }
+

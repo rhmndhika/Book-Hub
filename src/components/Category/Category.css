@@ -1,67 +1,128 @@
-.container-category{
+.wrap-category{
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.container-category {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 97vh;
-    margin-top: -15px;
-}
-
-.container-category .box{
-    width: 250px;
     height: 150px;
-    border-radius: 10px;
-    background: #fff;
-    margin: 20px;
-    position: relative;
-    box-shadow: 0px 0px 15px black;
-}
-
-.container-category .box .box-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    margin-left: auto;
-    margin-right: auto;
-    padding: 70px 0;
-}
-
-.box-content h3{
-    text-align: center;
-    font-size: 19px;
-    margin-top: -50px;
-}
-
-.box-content a{
-    text-decoration: none;
-    color: black;
-}
-
-.box img {
-    width: 60px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 30px;
 }
-.text-category {
-    margin: 30px 50px 0 50px;
+
+ .description .preview-description {
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+    margin: 55px 50px 0 50px;
 }
 
-.text-category  h1{
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.text-category  h2{
-    font-size: 20px;
+.description .preview-description h1 {
+    display: flex;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.016rem;
+    font-family: 'Manrope';
     font-weight: bold;
+    font-weight: 500;
+    padding-bottom: 12px;
 }
 
-.text-category  h3{
-    font-size: 20px;
-   
+.description .preview-description h2 {
+    display: flex;
+    font-family: "Balsamiq Sans";
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.025rem;
+    padding-bottom: 12px;
+}
+
+.description .preview-description h3 {
+    display: flex;
+    font-family: "Inter";
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
+
+.description .showmore-description {
+    display: flex;
+    white-space: nowrap;
+    justify-content: flex-end;
+    min-width: 80px;
+    margin: 0 50px 0 50px;
+}
+
+.description .showmore-description a {
+   font-size: 1rem;
+   line-height: 1.5rem;
+   letter-spacing: 0px;
+   background-color: transparent;
+   cursor: pointer;
+   color: black;
+}
+
+.wrap-showmore .showmore-description a:hover {
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+}
+
+
+.box-category{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 240px;
+    height: 80px;
+    margin: 27px;
+    border: 1px solid rgb(233, 231, 227);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.box-category:hover{
+    border: 1px solid blue;
+}
+
+.box-category a {
+    color: black;
+    text-decoration: none;
+}
+
+.inside-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: auto;
+}
+
+.inside-category img {
+    width: max-content;
+    height: 50px;
+    vertical-align: middle;
+    width: 50px;
+}
+
+
+.inside-category p{
+   margin-top: auto;
+   margin-bottom: auto;
+}
+
+.inside-category span{
+  width: 80px;
+}
+
+.inside-category .text-result {
+    font-size: 8px;
+}
+
+.horizontal-line{
+    margin: 15px 50px 0 50px;
 }
 
 @media (hover : hover) {
