@@ -16,7 +16,7 @@ import Modals from '../Modal/Modal';
 
 const url = "https://www.googleapis.com/books/v1/volumes?q="
 const key = "&key=AIzaSyDIwDev4gFHRqCh4SSaO9eLKEeI7oYt6aE";
-const max = "&maxResults=27"
+const max = "&maxResults=40"
 
 
 const Books = () => {

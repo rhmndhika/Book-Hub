@@ -45,14 +45,7 @@ const DetailCategory = () => {
                     <div className="info">
                       <h3 className="title">{i.volumeInfo.title}</h3>
                     </div>
-                      
-                    
-
-                    {/* <div className='description'>
-                      <h2>Description :</h2>
-                      <p>{i.volumeInfo.description}</p>
-                    </div>  */}
-                    
+                         
                   </div>
                 </div>
                     )

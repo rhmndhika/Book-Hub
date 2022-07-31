@@ -1,23 +1,20 @@
 .media-scroller{
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: auto;
-    white-space: nowrap;
     display: flex;
     margin: 15px 50px 0 50px;
 }
 
+.media-element {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 18px ;   
+   
+}
 .media-element img{
     width: 170px;
     height: 250px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-right: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
+   
     cursor: pointer;
-    border-radius: 8px;
 }
 
 .media-text {
@@ -39,18 +36,7 @@
     color: rgb(0, 0, 0);
 }
 
-.wrap-bookScroll{
-    padding-left: 12px;
-    padding-right: 12px;
-    position: relative;
-    display: flex;
-    overflow-x: auto;
-    flex-basis: 100%;
-    height: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-}
+
 
 .wrap .preview-description {
     display: flex;
@@ -62,19 +48,7 @@
 .wrap-bookScroll .box-bookScroll {
     scroll-snap-align: center;
 }
-.box-bookScroll .boxKeun{
-    box-sizing: border-box;
-    display: block;
-    overflow: hidden;
-    width: initial;
-    height: initial;
-    background: none;
-    opacity: 1;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    }
+
 
 .media-scroller::-webkit-scrollbar-track{
     background: transparent;
@@ -91,3 +65,12 @@
     background: #141414; 
     border-radius: 10px;
 }
+
+@media only screen and (max-width:1020px) {
+    .media-scroller{
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: auto;
+        white-space: nowrap;
+    }
+  }

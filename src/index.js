@@ -16,6 +16,7 @@ import Category from './components/Category/Category';
 import About from './pages/About';
 import Test from './pages/Test';
 import Home from './pages/Home';
+import SearchFound from './pages/SearchFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
     <Route path="/" element={<Home />} />
     <Route path="/category/" element={<CategoryPage />} />
     <Route path="/detailcategory/:subject" element={<DetailCategory />} />
+    <Route path="/detailsearch/:searchTerm" element={<SearchFound />} />
     <Route path="/about" element={<About />} />
     <Route path="/test" element={<Test/>} />
     <Route path="/books" element={<App />} />

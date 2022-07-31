@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 import './Header.css'
 import Arsitek from '../../asset/Arsitek.png'
 import BookLeft from '../../asset/BookLeft.jpg'
@@ -10,12 +11,27 @@ import Bootstrap from '../../asset/Bootstrap5.png'
 import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
+
+  const [search, setSearch] = useState("");
+
+  console.log(search)
+
+  const url = "https://www.googleapis.com/books/v1/volumes?q="
+  const key = "&key=AIzaSyDIwDev4gFHRqCh4SSaO9eLKEeI7oYt6aE";
+  const max = "&maxResults=40"
+
+  const findBook = async ()  => {
+    await axios
+    .get(`${url}${search}${key}${max}`)
+    .then( (res) => {
+        setSearch(res?.data?.items)
+        console.log(res?.data?.items)
+    })
+    .catch(console.error);
+  }
+
+
   return (
-    // <div className="container-header">
-    //   <div className='header'>
-    //     <h1 className='xd'>Book Hub</h1>
-    //   </div>
-    // </div>
     <div id='main'>
       <div className='wrap'>
         <div className='content'> 
@@ -32,36 +48,15 @@ const Header = () => {
           </div>
 
           <div className='content-2'>
-            {/* <div className='searchbar'>
-              <div className='icon'></div>
-              
-              <div className='inputs'>
-              <input></input>
-              </div>
-            </div> */}
              <div className='search-box'>
-              <input className="search-text" type="text" placeholder = "Search Books" />
-                <a href="#" className='search-btn'>
+              <input className="search-text" value={search} onChange={e=>setSearch(e.target.value)} type="text" placeholder = "Search Books" />
+                <a href={`/detailsearch/${search}`} className='search-btn'>
                   <i><FaSearch /></i>
                 </a>
             </div>
           </div>
 
           
-            {/* <div className='container-3'>
-                <div className='text-content-3'>
-                  <h1>Featured In</h1>
-                </div>
-                  <div className='sponsor'>
-                    <div className='item'>
-                      <img src={BootstrapIMG} />
-                      <img src={ReactIMG} />
-                      <img src={AxiosIMG} />
-                      <img src={GoogleBooks} />
-                    </div>
-                  </div>
-            </div> */}
-
           <div className='text-feature'>
             <h1>Featured in</h1>
           </div>
@@ -101,9 +96,6 @@ const Header = () => {
                   </div>
                 </div>
 
-
-              
-              
                 <hr className='horizontal-line' size="10px" width="100%"/>
             </div>
 

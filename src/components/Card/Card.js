@@ -64,7 +64,6 @@ const CardBooks = (props) =>  {
                     // price={i.saleInfo.listPrice.amount}
                     /> */}
                     </div>
-                    <button onClick={()=> setShowLogin(true)}></button>
                   </div>
                 </div>
                     )
