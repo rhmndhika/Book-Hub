@@ -93,7 +93,7 @@ const Header = () => {
                   </div>
                 </div>
 
-                <hr className='horizontal-line' size="10px" width="100%"/>
+                <hr className='horizontal-line' />
             </div>
 
         </div>

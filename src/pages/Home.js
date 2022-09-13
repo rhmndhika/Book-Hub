@@ -4,6 +4,7 @@ import Header from '../components/Header/Header'
 import Category from '../components/Category/Category'
 import BooksScroll from '../components/BooksScroll/BooksScroll'
 import BooksScroll2 from '../components/BooksScroll/BookScroll2'
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <BooksScroll />
         <BooksScroll2 />
         <Category />
+          <Footer />
     </div>
   )
 }

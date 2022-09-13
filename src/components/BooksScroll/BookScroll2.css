@@ -63,7 +63,7 @@
 }
 
 
-@media only screen and (max-width:1020px) {
+@media only screen and (max-width:1495px) {
     .media-scroller2{
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;

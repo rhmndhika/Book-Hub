@@ -67,7 +67,9 @@ const BooksScroll = () => {
                     publisher={i.volumeInfo.publisher}
                     published={i.volumeInfo.publishedDate}
                     link={i.volumeInfo.previewLink}
-                    epub={i.accessInfo.epub.isAvailable}
+                    epub={i.accessInfo.epub.isAvailable ? i.accessInfo.epub.isAvailable : 'false' }
+                    maturity={i.volumeInfo.maturityRating}
+                    type = {i.volumeInfo.printType}
                     currency={i.saleInfo.saleability ? i.saleInfo.saleability : ''}
                     // currency={i.saleInfo.saleability.listPrice.currencyCode}
                     // price={i.saleInfo.listPrice.amount}

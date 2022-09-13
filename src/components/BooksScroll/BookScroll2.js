@@ -42,7 +42,7 @@ const BooksScroll2 = () => {
   return (
     <div className='wrap2'>
           <div className='preview-description2'>
-                <h2>Explore (Subject) bestsellers</h2>
+                <h2>Explore bestsellers</h2>
             </div>
         <div className='media-scroller2'> 
     {BooksScroll.map((i, index) => {

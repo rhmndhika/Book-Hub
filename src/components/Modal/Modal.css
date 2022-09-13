@@ -45,14 +45,12 @@
   padding: 5px;
 }
 .leftDiv {
-  background-color: #efefef;
   color: #000;
   height: 400px;
   width: 38%;
   float: left;
 }
 .rightDiv {
-  background-color: #efefef;
   color: #000;
   height: 400px;
   width: 58%;
@@ -60,11 +58,9 @@
   overflow: hidden;
   position: relative;
   vertical-align: top;
-  float: right;
 }
 
 .bottomDiv{
-  background-color: #efefef;
   margin-top: 10px
 }
 
@@ -72,12 +68,19 @@
   
 } */
 
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .modal-box{
-  background: yellow;
   display: flex;
   flex-direction: row;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 9px;
+  padding-left: 5px;
+
 }
 
 .modal-box .modal-text{
@@ -97,10 +100,49 @@
   color: grey;
 }
 
-
-
 .modal-desc{
   position: absolute;
   overflow: auto;
   max-height: 100%;
+}
+
+.modal-image  {
+  display: flex;
+  justify-content: center;
+}
+
+.btnLink {
+   display: block;
+    width: 100%;
+    background: #4E9CAF;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.wrapBook {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.info-item-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-item-1 p {
+  margin-right: 20px;
+  display: flex;
 }
