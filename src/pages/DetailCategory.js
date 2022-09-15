@@ -52,7 +52,7 @@ const DetailCategory = () => {
         <a onClick={event => MasGerland(event, i.id)}>
         <div className="headerA">
           <div className="imageA">
-            {i.volumeInfo.imageLinks.thumbnail 
+            {i.volumeInfo.imageLinks
             ?
               <img src={i.volumeInfo.imageLinks.thumbnail} />
               :

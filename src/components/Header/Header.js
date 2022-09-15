@@ -6,6 +6,12 @@ import ReactIMG from '../../asset/React.png'
 import AxiosIMG from '../../asset/Axios.png'
 import GoogleBooks from '../../asset/GoogleBooks.png'
 import { FaSearch } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper";
+
 
 const Header = () => {
 
@@ -56,46 +62,42 @@ const Header = () => {
           
           <div className='text-feature'>
             <h1>Featured in</h1>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper"
+            >
+            <SwiperSlide>
+              <div className="box-sponsor">             
+                <img src={ReactIMG} />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="box-sponsor">
+                <img src={AxiosIMG} />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="box-sponsor">
+                <img src={BootstrapIMG} />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="box-sponsor">
+                <img src={GoogleBooks} />
+              </div>
+            </SwiperSlide>
+          
+          </Swiper>
+
           </div>
-            <div className='container-category'>
-
-                <div className='box-sponsor' >  
-                  <div className='inside-sponsor'>
-                  <span>
-                      <img src={ReactIMG}/>
-                  </span>   
-                  </div>
-                </div>
-
-                <div className='box-sponsor' >  
-                  <div className='inside-sponsor'>
-                  <span>
-                      <img src={AxiosIMG}/>
-                  </span>   
-                  </div>
-                </div>
-
-
-                <div className='box-sponsor' >  
-                  <div className='inside-sponsor'>
-                  <span>
-                      <img src={BootstrapIMG}/>
-                  </span>   
-                  </div>
-                </div>
-
-
-                <div className='box-sponsor' >  
-                  <div className='inside-sponsor'>
-                  <span>
-                      <img src={GoogleBooks}/>
-                  </span>   
-                  </div>
-                </div>
-
-                <hr className='horizontal-line' />
-            </div>
-
+           
+          <hr className='horizontal-line' />
         </div>
       </div>
     </div>

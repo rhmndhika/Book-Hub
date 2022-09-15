@@ -23,7 +23,7 @@ const Category = () => {
 
     const [category, setCategory] = useState("");
    
-    const [visible, setVisible] = useState(10);
+    const [visible, setVisible] = useState(13);
 
 
     const showMoreItems = () => {
@@ -123,11 +123,11 @@ const Category = () => {
             </div>
             <div className='wrap-showmore'>
                 <div className='showmore-description'>  
-                       {visible <=10 
+                       {visible >= 13
                         ?
-                        <a onClick={showMoreItems}>View all</a>
-                        :
                         <a onClick={showLessItems}>View less</a>
+                        :
+                        <a onClick={showMoreItems}>View all</a>
                        }
                 </div>
             </div>
@@ -148,7 +148,6 @@ const Category = () => {
                     </a>
             </div>
         )})}
-    <hr className='horizontal-line' size="10px" width="100%"/>
     </div>
     </div>
   )

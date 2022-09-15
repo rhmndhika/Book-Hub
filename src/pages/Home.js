@@ -14,7 +14,7 @@ const Home = () => {
         <BooksScroll />
         <BooksScroll2 />
         <Category />
-          <Footer />
+        <Footer />
     </div>
   )
 }

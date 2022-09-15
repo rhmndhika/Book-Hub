@@ -206,9 +206,9 @@
 }
 
 .box-sponsor{
-    width: 150px;
-    display: grid;
-    grid-template-columns: auto(1, 2fr);
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .text-feature{
@@ -231,6 +231,39 @@
     letter-spacing: 0.05rem;
     color: black;
 }
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: rgb(249, 248, 246);
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 @media only screen and (max-width:768px) {
     .search-text{
