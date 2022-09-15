@@ -69,6 +69,7 @@ const Header = () => {
                 delay: 2500,
                 disableOnInteraction: false,
               }}
+              loop={true}
               modules={[Autoplay, Pagination, Navigation]}
               className="mySwiper"
             >
@@ -97,7 +98,7 @@ const Header = () => {
 
           </div>
            
-          <hr className='horizontal-line' />
+        
         </div>
       </div>
     </div>
