@@ -45,12 +45,12 @@ const BooksScroll = () => {
                 <h2>Read your textbooks & find supporting sources</h2>
             </div>
         <div className='media-scroller'> 
-    {BooksScroll.map((i, index) => {
+    {BooksScroll?.map((i, index) => {
         return(
             <div key={index}>
             <a className='test'>
             <div className='media-element'>
-                <img onClick={event => MasGerland(event, i.id)} src={i.volumeInfo.imageLinks.thumbnail} />
+                <img onClick={event => MasGerland(event, i.id)} src={i.volumeInfo?.imageLinks?.thumbnail} />
             </div>
             </a>
             {i.id == id &&
